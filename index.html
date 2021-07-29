@@ -11,16 +11,23 @@
   <div class="container">
     <section class="calender">
       <div class="upper">
-        <div class="changeTheme"></div>
+        <div class="changeTheme"><span class="switch"></span></div>
         <div class="githubRepo">
-            <a href="https://github.com/adhish-bahl/Birthday-Palindrome">Go to Github Repository</a>
+            <a target="_blank" href="https://github.com/adhish-bahl/Birthday-Palindrome">Go to Github Repository</a>
         </div>
       </div>
-        <h1 class="heading">Check Out if your birthday is Palindrome!</h1>
-        <h1 class="subheading">Palindrome is a number or a word which when read forward or backward, means the same!</h1>
-        <button class="btn">Take me to the calculator</button>
+      <div class="bottom">
+        <div class="left">
+          <h1 class="heading">Check Out if your Birthday is Palindrome!</h1>
+          <h1 class="subheading">Palindrome is a number or a word which when read forward or backward, means the same!</h1>
+          <a href="#calculateSec"><button class="btn btnDown">Take me to the calculator</button></a>
+        </div>
+        <div class="right">
+          <img src="./images/original.jpg" class="calenderImg" alt="calender">
+        </div>
+      </div>
     </section>
-    <section class="calculator">
+    <section id="calculateSec" class="calculator">
         <h1 class="heading">Enter your Birth Date to Calculate</h1>
         <p class="subheading">This app checks your birthdate in 4 formats YYYY-MM-DD, DD-MM-YYYY, MM-DD-YY, MM-DD-YYYY</p>
         <p class="subheading">Example: 01 November 2001, then app will check for 20011101, 01112001, 110101, 11012001</p>
