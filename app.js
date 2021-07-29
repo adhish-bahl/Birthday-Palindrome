@@ -26,5 +26,18 @@ checkBtn.addEventListener("click", ()=> {
 
     // console.log(palindrome("yyyymmdd"));
 
-    console.log(checkPalindrome(mmddyy));
+
+    if(checkPalindrome(yyyymmdd)) {
+
+    } else if(checkPalindrome(ddmmyyyy)) {
+
+    } else if(checkPalindrome(mmddyy)) {
+
+    } else if(checkPalindrome(mmddyyyy)) {
+
+    } else {
+        
+    }
+
+    // console.log(checkPalindrome(mmddyy));
 });
