@@ -25,8 +25,6 @@ checkBtn.addEventListener("click", ()=> {
     const mmddyy = dd+mm+yy;
     const mmddyyyy = mm+dd+yyyy;
 
-    // console.log(palindrome("yyyymmdd"));
-
 
     if(checkPalindrome(yyyymmdd)) {
         output.textContent("Yeyeyeii, your Birthday in "+yyyy+"-"+mm+"-"+dd+"is a Palindrome!");
@@ -39,6 +37,4 @@ checkBtn.addEventListener("click", ()=> {
     } else {
         
     }
-
-    // console.log(checkPalindrome(mmddyy));
 });
