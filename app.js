@@ -1,7 +1,7 @@
 const inputDate = document.querySelector("#birthDate");
 const checkBtn = document.querySelector(".checkBtn");
 const output = document.querySelector(".output");
-const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 output.style.display = "none";
 
@@ -17,14 +17,18 @@ const checkPalindrome = (string) => {
 }
 
 const checkNextDate = (dd, mm, yyyy) => {
+    let ddNum = Number(dd);
+    let mmNum = Number(mm);
+    let yyyyNum = Number(yyyy);
+
     for(let i = 1; i > 0; i++) {
-        dd++;
-        if(daysInMonth[mm-1] < dd) {
-            dd = 1;
-            mm++;
-            if(mm > 12) {
-                mm = 1;
-                yyyy++;
+        ddNum++;
+        if(daysInMonth[mmNum-1] < ddNum) {
+            ddNum = 1;
+            mmNum++;
+            if(mmNum > 12) {
+                mmNum = 1;
+                yyyyNum++;
             }
         }
     }
