@@ -2,6 +2,8 @@ const inputDate = document.querySelector("#birthDate");
 const checkBtn = document.querySelector(".checkBtn");
 const output = document.querySelector(".output");
 
+// output.style.display = "none";
+
 
 const checkPalindrome = (string) => {
     const length = string.length;
@@ -37,4 +39,5 @@ checkBtn.addEventListener("click", ()=> {
     } else {
         
     }
+    output.style.display="block";
 });

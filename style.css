@@ -136,7 +136,7 @@ input {
   }
   
   footer {
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 1.5rem ;
     box-shadow: 0px 0px 10px 2px black;
     padding: 1rem;
@@ -156,4 +156,17 @@ input {
   
   li img {
     width: 25px;
+  }
+
+  .output {
+    font-size: 2rem;
+    border: 2px solid black;
+    min-width: 50%;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px 0%;
+    background-color: aquamarine;
+    box-shadow: 0px 0px 5px 1px black;
+    font-weight: bolder;
   }
