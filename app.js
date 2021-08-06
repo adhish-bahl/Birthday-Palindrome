@@ -2,7 +2,7 @@ const inputDate = document.querySelector("#birthDate");
 const checkBtn = document.querySelector(".checkBtn");
 const output = document.querySelector(".output");
 
-// output.style.display = "none";
+output.style.display = "none";
 
 
 const checkPalindrome = (string) => {
@@ -29,15 +29,15 @@ checkBtn.addEventListener("click", ()=> {
 
 
     if(checkPalindrome(yyyymmdd)) {
-        output.textContent("Yeyeyeii, your Birthday in "+yyyy+"-"+mm+"-"+dd+"is a Palindrome!");
+        output.textContent = "Yeyeyeii, your Birthday in "+yyyy+"-"+mm+"-"+dd+"is a Palindrome!";
     } else if(checkPalindrome(ddmmyyyy)) {
-        output.textContent("Yeyeyeii, your Birthday in "+dd+"-"+mm+"-"+yyyy+"is a Palindrome!");
+        output.textContent = "Yeyeyeii, your Birthday in "+dd+"-"+mm+"-"+yyyy+"is a Palindrome!";
     } else if(checkPalindrome(mmddyy)) {
-        output.textContent("Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yy+"is a Palindrome!");
+        output.textContent = "Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yy+"is a Palindrome!";
     } else if(checkPalindrome(mmddyyyy)) {
-        output.textContent("Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yyyy+"is a Palindrome!");
+        output.textContent = "Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yyyy+"is a Palindrome!";
     } else {
         
     }
-    output.style.display="block";
+    output.style.display = "block";
 });
