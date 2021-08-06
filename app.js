@@ -1,6 +1,7 @@
 const inputDate = document.querySelector("#birthDate");
 const checkBtn = document.querySelector(".checkBtn");
 const output = document.querySelector(".output");
+const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 output.style.display = "none";
 
@@ -13,6 +14,20 @@ const checkPalindrome = (string) => {
         }
     }
     return true;
+}
+
+const checkNextDate = (dd, mm, yyyy) => {
+    for(let i = 1; i > 0; i++) {
+        dd++;
+        if(daysInMonth[mm-1] < dd) {
+            dd = 1;
+            mm++;
+            if(mm > 12) {
+                mm = 1;
+                yyyy++;
+            }
+        }
+    }
 }
 
 checkBtn.addEventListener("click", ()=> {
@@ -37,7 +52,7 @@ checkBtn.addEventListener("click", ()=> {
     } else if(checkPalindrome(mmddyyyy)) {
         output.textContent = "Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yyyy+"is a Palindrome!";
     } else {
-        
+        checkNextDate(dd, mm, yyyy, yy)
     }
     output.style.display = "block";
 });
