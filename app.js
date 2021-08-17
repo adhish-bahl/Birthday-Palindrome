@@ -16,23 +16,23 @@ const checkPalindrome = (string) => {
     return true;
 }
 
-const checkNextDate = (dd, mm, yyyy) => {
-    let ddNum = Number(dd);
-    let mmNum = Number(mm);
-    let yyyyNum = Number(yyyy);
+// const checkNextDate = (dd, mm, yyyy) => {
+//     let ddNum = Number(dd);
+//     let mmNum = Number(mm);
+//     let yyyyNum = Number(yyyy);
 
-    for(let i = 1; i > 0; i++) {
-        ddNum++;
-        if(daysInMonth[mmNum-1] < ddNum) {
-            ddNum = 1;
-            mmNum++;
-            if(mmNum > 12) {
-                mmNum = 1;
-                yyyyNum++;
-            }
-        }
-    }
-}
+//     for(let i = 1; i > 0; i++) {
+//         ddNum++;
+//         if(daysInMonth[mmNum-1] < ddNum) {
+//             ddNum = 1;
+//             mmNum++;
+//             if(mmNum > 12) {
+//                 mmNum = 1;
+//                 yyyyNum++;
+//             }
+//         }
+//     }
+// }
 
 checkBtn.addEventListener("click", ()=> {
     const date  = inputDate.value.split("-");
@@ -48,15 +48,16 @@ checkBtn.addEventListener("click", ()=> {
 
 
     if(checkPalindrome(yyyymmdd)) {
-        output.textContent = "Yeyeyeii, your Birthday in "+yyyy+"-"+mm+"-"+dd+"is a Palindrome!";
+        output.textContent = "Yeyeyeii, your Birthday in "+yyyy+"-"+mm+"-"+dd+" is a Palindrome!";
     } else if(checkPalindrome(ddmmyyyy)) {
-        output.textContent = "Yeyeyeii, your Birthday in "+dd+"-"+mm+"-"+yyyy+"is a Palindrome!";
+        output.textContent = "Yeyeyeii, your Birthday in "+dd+"-"+mm+"-"+yyyy+" is a Palindrome!";
     } else if(checkPalindrome(mmddyy)) {
-        output.textContent = "Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yy+"is a Palindrome!";
+        output.textContent = "Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yy+" is a Palindrome!";
     } else if(checkPalindrome(mmddyyyy)) {
-        output.textContent = "Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yyyy+"is a Palindrome!";
+        output.textContent = "Yeyeyeii, your Birthday in "+mm+"-"+dd+"-"+yyyy+" is a Palindrome!";
     } else {
-        checkNextDate(dd, mm, yyyy, yy)
+        // checkNextDate(dd, mm, yyyy, yy)
+        output.textContent = "Oops! Your Birthday is not a palindrome!";
     }
     output.style.display = "block";
 });
